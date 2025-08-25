@@ -1,7 +1,7 @@
 import React from 'react';
 import '../Assets/Css/SignUp.css';
 import { Link } from 'react-router-dom';
-import Logo from '../Assets/Images/Logo.png';
+import Logo from '../Assets/Images/logo.png'
 
 function SignUp() {
   return (

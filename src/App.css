@@ -24,7 +24,23 @@ body {
 }
 
 /* Avoid horizontal scrollbars on small screens */
-html, body { width: 100%; overflow-x: hidden; }
+html, body { 
+  width: 100%; 
+  overflow-x: hidden; 
+}
+
+/* Add padding to body to account for fixed navbar on mobile only */
+@media (max-width: 719px) {
+  body {
+    padding-top: 80px;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    padding-top: 70px;
+  }
+}
 
 /* Soft aurora blobs behind content */
 .App::before,
