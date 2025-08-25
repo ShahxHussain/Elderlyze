@@ -1,0 +1,40 @@
+import React from 'react';
+import { Bot, Smile, Pill, Siren } from 'lucide-react';
+
+function Main() {
+  return (
+    <main className="main">
+      <div className="container">
+        <h1 className="main-title">Welcome to Elderlyze</h1>
+        <p className="main-sub">Quick actions for your daily care</p>
+
+        <div className="main-grid">
+          <a className="main-tile" href="#chat">
+            <div className="tile-icon"><Bot size={26} /></div>
+            <div className="tile-title">Chatbot</div>
+            <div className="tile-desc">Compassionate chat in Urdu and English</div>
+          </a>
+          <a className="main-tile" href="#mood">
+            <div className="tile-icon"><Smile size={26} /></div>
+            <div className="tile-title">Mood</div>
+            <div className="tile-desc">Tap an emoji to begin</div>
+          </a>
+          <a className="main-tile" href="#meds">
+            <div className="tile-icon"><Pill size={26} /></div>
+            <div className="tile-title">Medicine</div>
+            <div className="tile-desc">Add reminders and dosage</div>
+          </a>
+          <a className="main-tile" href="#sos">
+            <div className="tile-icon"><Siren size={26} /></div>
+            <div className="tile-title">SOS</div>
+            <div className="tile-desc">Contacts and auto alert</div>
+          </a>
+        </div>
+      </div>
+    </main>
+  );
+}
+
+export default Main;
+
+
