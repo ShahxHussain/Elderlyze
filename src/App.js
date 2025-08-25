@@ -5,6 +5,7 @@ import Tutorial from './pages/Tutorial';
 import SignIn from './pages/SignIn';
 import SignUp from './pages/SignUp';
 import Main from './pages/Main';
+import Mood from './pages/Mood';
 import Footer from './components/Footer';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
@@ -19,6 +20,7 @@ function App() {
           <Route path="/signin" element={<SignIn />} />
           <Route path="/signup" element={<SignUp />} />
           <Route path="/app" element={<Main />} />
+          <Route path="/app/mood" element={<Mood />} />
         </Routes>
         <Footer />
       </div>

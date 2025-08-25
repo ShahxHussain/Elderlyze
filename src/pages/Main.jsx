@@ -14,7 +14,7 @@ function Main() {
             <div className="tile-title">Chatbot</div>
             <div className="tile-desc">Compassionate chat in Urdu and English</div>
           </a>
-          <a className="main-tile" href="#mood">
+          <a className="main-tile" href="/app/mood">
             <div className="tile-icon"><Smile size={26} /></div>
             <div className="tile-title">Mood</div>
             <div className="tile-desc">Tap an emoji to begin</div>
