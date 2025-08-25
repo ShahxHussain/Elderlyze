@@ -1,4 +1,6 @@
 import React, { useRef, useState, useEffect } from 'react';
+import '../Assets/Css/Chatbot.css';
+import { Send, Wand2, HeartHandshake, SmilePlus } from 'lucide-react';
 import logo from '../logo.png';
 
 function Chatbot() {
@@ -35,6 +37,9 @@ function Chatbot() {
             <div className="chat-status">Online • compassionate support</div>
           </div>
         </div>
+        <div className="chat-header-right">
+          <span className="chip online" aria-label="Connection status">● Live</span>
+        </div>
       </header>
 
       <div className="chat-layout">
@@ -53,6 +58,11 @@ function Chatbot() {
         </aside>
 
         <section className="chat-main">
+          <div className="chat-actions" aria-label="Quick actions">
+            <button className="chip action" type="button"><Wand2 size={14} /> Breathing</button>
+            <button className="chip action" type="button"><HeartHandshake size={14} /> Grounding</button>
+            <button className="chip action" type="button"><SmilePlus size={14} /> Gratitude</button>
+          </div>
           <div ref={listRef} className="chat-messages" role="log" aria-live="polite">
             {messages.map((m) => (
               <div key={m.id} className={`chat-row ${m.role}`}>
@@ -71,7 +81,9 @@ function Chatbot() {
               onChange={(e) => setInput(e.target.value)}
               aria-label="Message"
             />
-            <button className="btn btn-primary" type="submit">Send</button>
+            <button className="btn btn-primary" type="submit" aria-label="Send message">
+              <Send size={16} style={{marginRight:8}} /> Send
+            </button>
           </form>
         </section>
       </div>

@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import '../Assets/Css/Tutorial.css';
 import { useNavigate } from 'react-router-dom';
 import { ArrowRight, X } from 'lucide-react';
 

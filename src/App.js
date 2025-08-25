@@ -9,7 +9,7 @@ import Moods from './pages/Moods';
 import Chatbot from './pages/Chatbot';
 import Medicines from './pages/Medicines';
 import Footer from './components/Footer';
-import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
+import {Routes, Route, useLocation } from 'react-router-dom';
 import { useEffect } from 'react';
 
 function App() {

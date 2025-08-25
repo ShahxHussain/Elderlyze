@@ -1,4 +1,5 @@
 import React from 'react';
+import '../Assets/Css/Home.css';
 import { Bot, Smile, Pill, Siren, Languages, PlayCircle, ShieldCheck, Bell, Quote, Users, Shield, Sparkles } from 'lucide-react';
 
 function Home() {

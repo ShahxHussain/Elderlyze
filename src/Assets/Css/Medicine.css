@@ -1,0 +1,29 @@
+.meds { padding: 48px 0; }
+.meds-title { margin: 0 0 6px; font-size: 28px; }
+.meds-sub { color: var(--muted); margin: 0 0 16px; }
+.meds-header { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 12px; }
+.meds-actions { display: flex; align-items: center; gap: 10px; }
+.meds-search { padding: 10px 12px; border: 1px solid var(--border); border-radius: 10px; background: #fff; }
+.meds-list { display: grid; gap: 10px; }
+.meds-empty { padding: 16px; border: 1px dashed var(--border); border-radius: 12px; color: var(--muted); background: #f9fafb; }
+.meds-item { display: grid; grid-template-columns: 1fr auto; gap: 10px; align-items: start; padding: 14px; border: 1px solid var(--border); border-radius: 12px; background: #fff; box-shadow: var(--shadow); }
+.meds-item-main { display: grid; gap: 6px; }
+.meds-name { font-weight: 800; font-size: 18px; }
+.meds-meta { display: flex; gap: 8px; flex-wrap: wrap; }
+.meds-notes { color: var(--muted); }
+.meds-item-actions { display: flex; gap: 8px; }
+
+.meds-modal { position: fixed; inset: 0; background: rgba(15, 23, 42, 0.3); display: grid; place-items: center; padding: 20px; z-index: 100; }
+.meds-modal-card { width: 100%; max-width: 560px; background: #fff; border: 1px solid var(--border); border-radius: 16px; box-shadow: var(--shadow); padding: 16px; }
+.meds-modal-head { display: flex; align-items: center; justify-content: space-between; margin-bottom: 10px; }
+.meds-form { display: grid; gap: 10px; }
+.meds-form label { display: grid; gap: 6px; font-weight: 700; color: #111827; }
+.meds-form input { padding: 12px 14px; border: 1px solid var(--border); border-radius: 12px; background: #fafafa; }
+.meds-form select { padding: 12px 14px; border: 1px solid var(--border); border-radius: 12px; background: #fff; }
+.meds-form-actions { display: flex; gap: 10px; justify-content: flex-end; }
+
+@media (max-width: 640px) {
+  .meds-header { flex-direction: column; align-items: stretch; }
+  .meds-actions { justify-content: space-between; }
+}
+

@@ -1,4 +1,5 @@
 import React from 'react';
+import '../Assets/Css/Main.css';
 import { Bot, Smile, Pill, Siren } from 'lucide-react';
 
 function Main() {

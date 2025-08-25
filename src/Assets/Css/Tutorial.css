@@ -1,0 +1,35 @@
+.tutorial { padding: 56px 0; }
+.tutorial-page { padding: 48px 0 64px; flex: 1 0 auto; }
+.tutorial-header { position: sticky; top: 64px; z-index: 10; display: flex; align-items: center; justify-content: space-between; margin-bottom: 16px; background: rgba(255,255,255,0.75); backdrop-filter: blur(8px); border: 1px solid var(--border); border-radius: 14px; padding: 10px 12px; box-shadow: var(--shadow); }
+.tutorial-header .header-left { display: flex; align-items: center; gap: 10px; }
+.tutorial-header h1 { margin: 0; font-size: 20px; }
+.tutorial-body { display: grid; gap: 16px; }
+.header-right { display: inline-flex; gap: 8px; }
+.tutorial-grid { display: grid; grid-template-columns: 1fr; gap: 16px; }
+.tutorial-text { background: linear-gradient(180deg,#ffffff,#f8fbff); border: 1px solid var(--border); border-radius: 14px; padding: 18px; box-shadow: var(--shadow); }
+.tutorial-text ol { margin: 0; padding-left: 18px; display: grid; gap: 8px; }
+.tutorial-form { display: grid; gap: 8px; }
+.tutorial-form .field-row { display: grid; gap: 6px; }
+.tutorial-form input, .tutorial-form select { padding: 10px 12px; border: 1px solid var(--border); border-radius: 10px; background: #fff; }
+.emoji-grid { display: grid; grid-template-columns: repeat(9, 1fr); gap: 8px; }
+.mood.large { width: 48px; height: 48px; font-size: 24px; }
+.badge { display: inline-flex; align-items: center; gap: 6px; border-radius: 999px; padding: 6px 10px; font-weight: 700; font-size: 12px; margin-top: 8px; }
+.badge.danger { background: #fff1f2; color: #b91c1c; border: 1px solid #fecaca; }
+.badge.safe { background: #f0fdf4; color: #166534; border: 1px solid #bbf7d0; }
+.demo-chat { background: #f8fafc; border: 1px solid var(--border); border-radius: 12px; padding: 12px; }
+.bubble-row { display: flex; margin-bottom: 8px; }
+.demo-bubble { padding: 10px 12px; border-radius: 12px; max-width: 100%; }
+.demo-bubble.user { background: #e0e7ff; color: #1e3a8a; margin-left: auto; }
+.demo-bubble.bot { background: #ecfeff; color: #155e75; margin-right: auto; }
+.demo-moods { display: flex; gap: 8px; }
+.mood { width: 44px; height: 44px; border-radius: 10px; border: 1px solid var(--border); background: #fff; box-shadow: var(--shadow); font-size: 22px; }
+
+@media (min-width: 720px) {
+  .tutorial-grid { grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 480px) {
+  .tutorial-header { top: 56px; padding: 8px 10px; }
+  .tutorial-header h1 { font-size: 18px; }
+}
+

@@ -1,4 +1,5 @@
 import React, { useMemo, useState } from 'react';
+import '../Assets/Css/Moods.css';
 
 const ALL_MOODS = [
   { emoji: '😀', name: 'Happy' },

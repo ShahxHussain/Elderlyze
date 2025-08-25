@@ -1,4 +1,5 @@
 import React, { useEffect, useMemo, useState } from 'react';
+import '../Assets/Css/Medicine.css';
 
 const STORAGE_KEY = 'elderlyze.medicines';
 
