@@ -1,8 +1,8 @@
-.hero { padding: 86px 0; background: radial-gradient(900px 400px at 0% -100px, #eaf0ff, transparent), radial-gradient(800px 300px at 100% -120px, #eef6ff, transparent); }
+.hero { padding: 86px 0; background: radial-gradient(900px 400px at 0% -100px, #ecfdf5, transparent), radial-gradient(800px 300px at 100% -120px, #f0fff9, transparent); }
 .hero-content { display: grid; grid-template-columns: 1fr; gap: 28px; align-items: center; }
-.eyebrow { display: inline-flex; align-items: center; gap: 6px; background: #eef2ff; color: #334155; border: 1px solid #e0e7ff; padding: 6px 10px; border-radius: 999px; font-weight: 700; font-size: 12px; }
+.eyebrow { display: inline-flex; align-items: center; gap: 6px; background: #e6fffa; color: #1f2937; border: 1px solid #ccfbf1; padding: 6px 10px; border-radius: 999px; font-weight: 700; font-size: 12px; }
 .hero-text h1 { font-size: 52px; margin: 6px 0 10px; }
-.gradient-title { background: linear-gradient(90deg, #4763ff 0%, #7a5cff 50%, #34caa1 100%); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.gradient-title { background: linear-gradient(90deg, #34caa1 0%, #2fb08f 60%, #a7f3d0 100%); -webkit-background-clip: text; background-clip: text; color: transparent; }
 .hero-text .tagline { font-size: 18px; color: var(--muted); margin: 0 0 22px; }
 .hero-ctas { display: flex; gap: 12px; }
 .metrics { display: flex; align-items: center; gap: 10px; margin-top: 14px; color: #475569; }
@@ -20,16 +20,16 @@
 .features h2 { font-size: 28px; margin: 0 0 22px; }
 .features-grid { display: grid; grid-template-columns: 1fr; gap: 16px; }
 .feature-card { background: var(--card); border: 1px solid var(--border); border-radius: 14px; padding: 18px; text-align: left; box-shadow: var(--shadow); transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease; }
-.feature-card.interactive:hover { transform: translateY(-4px); box-shadow: 0 16px 40px rgba(17,24,39,.12); border-color: rgba(68,103,242,.25); }
+.feature-card.interactive:hover { transform: translateY(-4px); box-shadow: 0 16px 40px rgba(17,24,39,.12); border-color: rgba(47,176,143,.25); }
 .feature-card .icon { font-size: 26px; margin-bottom: 6px; }
 .feature-card h3 { margin: 6px 0; font-size: 18px; }
 .feature-card p { margin: 0; color: var(--muted); }
 
-.how { padding: 56px 0; background: #f3f6ff; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+.how { padding: 56px 0; background: #ecfdf5; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
 .how h2 { margin: 0 0 18px; }
 .steps { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
 .steps li { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 12px; display: flex; align-items: center; gap: 10px; box-shadow: var(--shadow); }
-.step-badge { background: var(--secondary); color: #fff; width: 24px; height: 24px; border-radius: 50%; display: inline-grid; place-items: center; font-weight: 800; }
+.step-badge { background: var(--primary); color: #fff; width: 24px; height: 24px; border-radius: 50%; display: inline-grid; place-items: center; font-weight: 800; }
 
 .trusted { padding: 18px 0; margin-top: -12px; }
 .trusted-row { display: flex; align-items: center; gap: 12px; justify-content: space-between; background: rgba(255,255,255,0.7); border: 1px solid var(--border); border-radius: 12px; padding: 12px 16px; box-shadow: var(--shadow); }
@@ -43,7 +43,7 @@
 .quotes blockquote { margin: 0; padding: 14px 16px; background: var(--card); border-left: 4px solid var(--accent); border-radius: 10px; color: #1d2433; box-shadow: var(--shadow); display: flex; align-items: center; gap: 8px; }
 
 .cta { padding: 40px 0 60px; }
-.cta-inner { background: linear-gradient(135deg, #eff4ff, #f4fbf9); border: 1px solid var(--border); border-radius: 18px; padding: 20px; display: flex; align-items: center; justify-content: space-between; box-shadow: var(--shadow); }
+.cta-inner { background: linear-gradient(135deg, #f0fff9, #f6fffb); border: 1px solid var(--border); border-radius: 18px; padding: 20px; display: flex; align-items: center; justify-content: space-between; box-shadow: var(--shadow); }
 .cta .muted { color: var(--muted); margin: 4px 0 0; }
 
 @media (min-width: 720px) {

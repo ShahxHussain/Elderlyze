@@ -1,6 +1,7 @@
 .auth { padding: 48px 0; background: radial-gradient(1200px 600px at 50% -200px, #f0f5ff, rgba(255,255,255,0)); }
 .auth-card { margin: 0 auto; max-width: 560px; background: #fff; border: 1px solid var(--border); border-radius: 16px; box-shadow: var(--shadow); padding: 28px; text-align: left; }
-.auth-icon { width: 64px; height: 64px; border-radius: 16px; background: var(--primary); display: grid; place-items: center; color: #fff; font-size: 28px; margin: 0 auto 10px; }
+.auth-icon { display: none; }
+.auth-logo { width: 96px; height: 36px; display: block; margin: 0 auto 10px; object-fit: contain; }
 .auth h1 { text-align: center; margin: 6px 0 6px; }
 .auth-sub { text-align: center; color: var(--muted); margin: 0 0 18px; }
 .auth-form { display: grid; gap: 10px; }

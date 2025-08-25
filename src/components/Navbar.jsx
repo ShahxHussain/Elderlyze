@@ -1,7 +1,7 @@
 import React from 'react';
 import '../Assets/Css/Navbar.css';
 import { Link, useNavigate } from 'react-router-dom';
-import logo from '../Assets/Images/logo.png';
+import Logo from '../Assets/Images/Logo.png';
 
 function Navbar() {
   const navigate = useNavigate();
@@ -9,7 +9,7 @@ function Navbar() {
     <header className="navbar">
       <div className="container nav-content">
         <Link className="brand" to="/">
-          <img src={logo} alt="Elderlyze logo" className="brand-logo" />
+          <img src={Logo} alt="Elderlyze logo" className="brand-logo" />
         </Link>
         <nav className="nav-links" aria-label="Primary Navigation">
           <Link to="/">Home</Link>

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import '../Assets/Css/SignIn.css';
 import { Link, useNavigate } from 'react-router-dom';
+import Logo from '../Assets/Images/Logo.png';
 
 function SignIn() {
   const navigate = useNavigate();
@@ -11,7 +12,7 @@ function SignIn() {
     <main className="auth">
       <div className="container">
         <div className="auth-card">
-          <div className="auth-icon" aria-hidden="true">💙</div>
+          <img src={Logo} alt="Elderlyze" className="auth-logo" />
           <h1>Welcome Back</h1>
           <p className="auth-sub">Sign in to continue your journey with Elderlyze</p>
 

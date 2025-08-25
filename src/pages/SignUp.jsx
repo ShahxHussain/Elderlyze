@@ -1,13 +1,14 @@
 import React from 'react';
 import '../Assets/Css/SignUp.css';
 import { Link } from 'react-router-dom';
+import Logo from '../Assets/Images/Logo.png';
 
 function SignUp() {
   return (
     <main className="auth">
       <div className="container">
         <div className="auth-card">
-          <div className="auth-icon" aria-hidden="true">💜</div>
+          <img src={Logo} alt="Elderlyze" className="auth-logo" />
           <h1>Create your account</h1>
           <p className="auth-sub">Join Elderlyze for wellness, companionship, and safety</p>
 

@@ -1,8 +1,10 @@
 import React from 'react';
 import '../Assets/Css/Home.css';
+import { useNavigate } from 'react-router-dom';
 import { Bot, Smile, Pill, Siren, Languages, PlayCircle, ShieldCheck, Bell, Quote, Users, Shield, Sparkles } from 'lucide-react';
 
 function Home() {
+  const navigate = useNavigate();
   return (
     <main>
       <section id="home" className="hero" role="region" aria-label="Hero">
@@ -89,7 +91,7 @@ function Home() {
           <h2>Learn How to Use Elderlyze</h2>
           <div className="tutorial-card interactive">
             <p>Follow our friendly walkthrough to get started quickly. Large buttons, clear text, and simple steps guide you along the way.</p>
-            <button className="btn btn-secondary"><PlayCircle size={18} style={{marginRight:8}} /> Start Tutorial</button>
+            <button className="btn btn-secondary" onClick={() => navigate('/tutorial')}><PlayCircle size={18} style={{marginRight:8}} /> Start Tutorial</button>
           </div>
         </div>
       </section>
