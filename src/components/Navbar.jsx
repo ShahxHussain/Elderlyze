@@ -11,12 +11,12 @@ function Navbar() {
           <img src={logo} alt="Elderlyze logo" className="brand-logo" />
         </Link>
         <nav className="nav-links" aria-label="Primary Navigation">
-          <a href="#home">Home</a>
-          <a href="#features">Features</a>
-          <a href="#how-it-works">How It Works</a>
-          <a href="#tutorial">Tutorial</a>
-          <a href="#about">About</a>
-          <a href="#contact">Contact</a>
+          <Link to="/">Home</Link>
+          <Link to={{ pathname: '/', hash: '#features' }}>Features</Link>
+          <Link to={{ pathname: '/', hash: '#how-it-works' }}>How It Works</Link>
+          <Link to={{ pathname: '/', hash: '#tutorial' }}>Tutorial</Link>
+          <Link to={{ pathname: '/', hash: '#about' }}>About</Link>
+          <Link to={{ pathname: '/', hash: '#contact' }}>Contact</Link>
         </nav>
         <div className="auth-actions">
           <button className="btn btn-ghost" aria-label="Login" onClick={() => navigate('/signin')}>Login</button>

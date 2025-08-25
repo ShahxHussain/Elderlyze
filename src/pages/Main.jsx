@@ -9,7 +9,7 @@ function Main() {
         <p className="main-sub">Quick actions for your daily care</p>
 
         <div className="main-grid">
-          <a className="main-tile" href="#chat">
+          <a className="main-tile" href="/app/chat">
             <div className="tile-icon"><Bot size={26} /></div>
             <div className="tile-title">Chatbot</div>
             <div className="tile-desc">Compassionate chat in Urdu and English</div>
@@ -19,7 +19,7 @@ function Main() {
             <div className="tile-title">Mood</div>
             <div className="tile-desc">Tap an emoji to begin</div>
           </a>
-          <a className="main-tile" href="#meds">
+          <a className="main-tile" href="/app/medicines">
             <div className="tile-icon"><Pill size={26} /></div>
             <div className="tile-title">Medicine</div>
             <div className="tile-desc">Add reminders and dosage</div>
