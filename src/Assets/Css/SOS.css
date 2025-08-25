@@ -1,0 +1,36 @@
+.sos { padding: 48px 0; }
+.sos-title { margin: 0 0 6px; font-size: 28px; }
+.sos-sub { color: var(--muted); margin: 0 0 16px; }
+.sos-header { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 12px; }
+.sos-actions { display: flex; gap: 10px; }
+
+.sos-card { background: #fff; border: 1px solid var(--border); border-radius: 14px; padding: 16px; box-shadow: var(--shadow); margin-bottom: 12px; }
+.section-title { margin: 0 0 10px; font-size: 18px; }
+.sos-row { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
+.switch { display: inline-flex; align-items: center; gap: 8px; font-weight: 700; }
+.switch input { width: 18px; height: 18px; }
+.sos-row .inline { display: grid; gap: 6px; }
+.sos-row select { padding: 10px 12px; border: 1px solid var(--border); border-radius: 10px; background: #fff; }
+.muted { color: var(--muted); }
+
+.sos-form { display: grid; gap: 10px; }
+.sos-form .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.sos-form label { display: grid; gap: 6px; font-weight: 700; color: #111827; }
+.sos-form input { padding: 12px 14px; border: 1px solid var(--border); border-radius: 12px; background: #fafafa; }
+.sos-form select { padding: 12px 14px; border: 1px solid var(--border); border-radius: 12px; background: #fff; }
+.form-actions { display: flex; gap: 10px; justify-content: flex-end; }
+
+.contact-list { display: grid; gap: 10px; }
+.empty { padding: 12px; border: 1px dashed var(--border); border-radius: 12px; color: var(--muted); background: #f9fafb; }
+.contact-item { display: grid; grid-template-columns: 1fr auto; gap: 10px; align-items: start; padding: 14px; border: 1px solid var(--border); border-radius: 12px; background: #fff; box-shadow: var(--shadow); }
+.contact-main { display: grid; gap: 6px; }
+.contact-name { font-weight: 800; font-size: 18px; }
+.contact-meta { display: flex; gap: 8px; flex-wrap: wrap; }
+.contact-actions { display: flex; gap: 8px; }
+
+@media (max-width: 640px) {
+  .sos-header { flex-direction: column; align-items: stretch; }
+  .sos-form .grid { grid-template-columns: 1fr; }
+}
+
+

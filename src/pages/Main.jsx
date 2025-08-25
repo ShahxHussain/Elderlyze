@@ -25,7 +25,7 @@ function Main() {
             <div className="tile-title">Medicine</div>
             <div className="tile-desc">Add reminders and dosage</div>
           </a>
-          <a className="main-tile" href="#sos">
+          <a className="main-tile" href="/app/sos">
             <div className="tile-icon"><Siren size={26} /></div>
             <div className="tile-title">SOS</div>
             <div className="tile-desc">Contacts and auto alert</div>

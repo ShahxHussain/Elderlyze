@@ -5,6 +5,7 @@ import Tutorial from './pages/Tutorial';
 import SignIn from './pages/SignIn';
 import SignUp from './pages/SignUp';
 import Main from './pages/Main';
+import SOSInteraction from './pages/SOSInteraction';
 import Moods from './pages/Moods';
 import Chatbot from './pages/Chatbot';
 import Medicines from './pages/Medicines';
@@ -39,6 +40,7 @@ function App() {
           <Route path="/signin" element={<SignIn />} />
           <Route path="/signup" element={<SignUp />} />
           <Route path="/app" element={<Main />} />
+          <Route path="/app/sos" element={<SOSInteraction />} />
           <Route path="/app/mood" element={<Moods />} />
           <Route path="/app/chat" element={<Chatbot />} />
           <Route path="/app/medicines" element={<Medicines />} />

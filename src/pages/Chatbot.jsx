@@ -1,7 +1,7 @@
 import React, { useRef, useState, useEffect } from 'react';
 import '../Assets/Css/Chatbot.css';
 import { Send, Wand2, HeartHandshake, SmilePlus } from 'lucide-react';
-import logo from '../logo.png';
+import logo from '../Assets/Images/logo.png';
 
 function Chatbot() {
   const [messages, setMessages] = useState([
