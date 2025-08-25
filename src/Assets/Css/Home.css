@@ -46,6 +46,8 @@
 .cta-inner { background: linear-gradient(135deg, #f0fff9, #f6fffb); border: 1px solid var(--border); border-radius: 18px; padding: 20px; display: flex; align-items: center; justify-content: space-between; box-shadow: var(--shadow); }
 .cta .muted { color: var(--muted); margin: 4px 0 0; }
 
+
+
 @media (min-width: 720px) {
   .hero { padding: 120px 0 96px; }
   .hero-content { grid-template-columns: 1.1fr 0.9fr; }

@@ -1,7 +1,7 @@
 import React from 'react';
 import '../Assets/Css/Home.css';
 import { useNavigate } from 'react-router-dom';
-import { Bot, Smile, Pill, Siren, Languages, PlayCircle, ShieldCheck, Bell, Quote, Users, Shield, Sparkles } from 'lucide-react';
+import { Bot, Smile, Pill, Siren, Languages, PlayCircle, ShieldCheck, Bell, Quote, Users, Shield, Sparkles, Activity } from 'lucide-react';
 
 function Home() {
   const navigate = useNavigate();
@@ -70,9 +70,16 @@ function Home() {
               <h3>Multi-language Support</h3>
               <p>Seamless Urdu and English responses from the chatbot.</p>
             </article>
+            <article className="feature-card interactive">
+              <div className="icon" aria-hidden="true"><Activity size={24} /></div>
+              <h3>Physical Activities</h3>
+              <p>Guided exercises, yoga, meditation and wellness videos.</p>
+            </article>
           </div>
         </div>
       </section>
+
+
 
       <section id="how-it-works" className="how" role="region" aria-label="How it works">
         <div className="container">

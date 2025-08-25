@@ -1,238 +1,143 @@
 import React, { useState } from 'react';
 import '../Assets/Css/PhysicalActivities.css';
-import { Play, Clock, Users, Heart, Brain, Sun, Moon, Leaf, Dumbbell, Music } from 'lucide-react';
+import { Heart, Brain, Dumbbell, Leaf, Sun, Activity } from 'lucide-react';
 
 function PhysicalActivities() {
   const [selectedActivity, setSelectedActivity] = useState('yoga');
-
+  
   const activities = {
     yoga: {
-      title: "Yoga & Stretching",
-      icon: <Sun size={24} />,
-      description: "Gentle yoga poses and stretching exercises for flexibility and balance",
+      icon: Heart,
+      title: 'Yoga & Stretching',
+      description: 'Gentle yoga poses and stretching exercises for flexibility and balance.',
       videos: [
-        {
-          id: "dQw4w9WgXcQ", // Replace with actual yoga video ID
-          title: "Gentle Morning Yoga for Seniors",
-          duration: "15 min",
-          instructor: "Sarah Johnson"
-        },
-        {
-          id: "dQw4w9WgXcQ", // Replace with actual yoga video ID
-          title: "Chair Yoga for Balance",
-          duration: "20 min",
-          instructor: "Mike Chen"
-        },
-        {
-          id: "dQw4w9WgXcQ", // Replace with actual yoga video ID
-          title: "Evening Relaxation Stretches",
-          duration: "12 min",
-          instructor: "Emma Davis"
-        }
+        { title: 'Gentle Morning Yoga for Seniors', duration: '15 min', instructor: 'Sarah Johnson' },
+        { title: 'Chair Yoga Basics', duration: '12 min', instructor: 'Mike Chen' },
+        { title: 'Evening Stretch Routine', duration: '18 min', instructor: 'Emma Davis' },
+        { title: 'Balance & Flexibility', duration: '20 min', instructor: 'David Wilson' }
       ]
     },
     meditation: {
-      title: "Meditation & Mindfulness",
-      icon: <Brain size={24} />,
-      description: "Guided meditation sessions for mental clarity and stress relief",
+      icon: Brain,
+      title: 'Meditation & Mindfulness',
+      description: 'Calming meditation practices and mindfulness exercises for mental wellness.',
       videos: [
-        {
-          id: "dQw4w9WgXcQ", // Replace with actual meditation video ID
-          title: "5-Minute Breathing Meditation",
-          duration: "5 min",
-          instructor: "Dr. Lisa Park"
-        },
-        {
-          id: "dQw4w9WgXcQ", // Replace with actual meditation video ID
-          title: "Mindful Walking Practice",
-          duration: "18 min",
-          instructor: "James Wilson"
-        },
-        {
-          id: "dQw4w9WgXcQ", // Replace with actual meditation video ID
-          title: "Body Scan Relaxation",
-          duration: "25 min",
-          instructor: "Maria Rodriguez"
-        }
+        { title: '5-Minute Meditation', duration: '5 min', instructor: 'Lisa Park' },
+        { title: 'Breathing Exercises', duration: '10 min', instructor: 'James Miller' },
+        { title: 'Mindfulness Practice', duration: '15 min', instructor: 'Anna Rodriguez' },
+        { title: 'Stress Relief Session', duration: '12 min', instructor: 'Tom Anderson' }
       ]
     },
     walking: {
-      title: "Walking & Mobility",
-      icon: <Leaf size={24} />,
-      description: "Walking exercises and mobility training for daily movement",
+      icon: Sun,
+      title: 'Walking & Mobility',
+      description: 'Gentle walking routines and mobility exercises for daily movement.',
       videos: [
-        {
-          id: "dQw4w9WgXcQ", // Replace with actual walking video ID
-          title: "Indoor Walking Workout",
-          duration: "30 min",
-          instructor: "Tom Anderson"
-        },
-        {
-          id: "dQw4w9WgXcQ", // Replace with actual walking video ID
-          title: "Balance & Gait Training",
-          duration: "22 min",
-          instructor: "Dr. Sarah Kim"
-        },
-        {
-          id: "dQw4w9WgXcQ", // Replace with actual walking video ID
-          title: "Stair Climbing Safety",
-          duration: "16 min",
-          instructor: "Robert Taylor"
-        }
+        { title: 'Indoor Walking Guide', duration: '20 min', instructor: 'Helen Brown' },
+        { title: 'Balance Exercises', duration: '15 min', instructor: 'Robert Lee' },
+        { title: 'Mobility Stretches', duration: '18 min', instructor: 'Maria Garcia' },
+        { title: 'Step-by-Step Walking', duration: '25 min', instructor: 'John Smith' }
       ]
     },
     strength: {
-      title: "Strength Training",
-      icon: <Dumbbell size={24} />,
-      description: "Light strength exercises using body weight and light weights",
+      icon: Dumbbell,
+      title: 'Strength Training',
+      description: 'Light strength exercises using body weight and gentle resistance.',
       videos: [
-        {
-          id: "dQw4w9WgXcQ", // Replace with actual strength video ID
-          title: "Body Weight Squats",
-          duration: "18 min",
-          instructor: "Coach Mark"
-        },
-        {
-          id: "dQw4w9WgXcQ", // Replace with actual strength video ID
-          title: "Wall Push-ups",
-          duration: "15 min",
-          instructor: "Jenny Smith"
-        },
-        {
-          id: "dQw4w9WgXcQ", // Replace with actual strength video ID
-          title: "Light Resistance Band Workout",
-          duration: "25 min",
-          instructor: "Carlos Mendez"
-        }
+        { title: 'Light Weight Training', duration: '20 min', instructor: 'Carlos Mendez' },
+        { title: 'Resistance Band Workout', duration: '18 min', instructor: 'Susan White' },
+        { title: 'Body Weight Exercises', duration: '22 min', instructor: 'Kevin Johnson' },
+        { title: 'Core Strengthening', duration: '16 min', instructor: 'Rachel Green' }
       ]
     },
-    taiChi: {
-      title: "Tai Chi & Qigong",
-      icon: <Moon size={24} />,
-      description: "Slow, flowing movements for balance, coordination and inner peace",
+    taichi: {
+      icon: Leaf,
+      title: 'Tai Chi & Qigong',
+      description: 'Flowing movements and breathing exercises for harmony and balance.',
       videos: [
-        {
-          id: "dQw4w9WgXcQ", // Replace with actual tai chi video ID
-          title: "Basic Tai Chi Forms",
-          duration: "28 min",
-          instructor: "Master Li Wei"
-        },
-        {
-          id: "dQw4w9WgXcQ", // Replace with actual tai chi video ID
-          title: "Qigong Breathing Exercises",
-          duration: "20 min",
-          instructor: "Sifu Chen"
-        },
-        {
-          id: "dQw4w9WgXcQ", // Replace with actual tai chi video ID
-          title: "Tai Chi for Arthritis",
-          duration: "35 min",
-          instructor: "Dr. Wang"
-        }
+        { title: 'Tai Chi for Beginners', duration: '25 min', instructor: 'Master Chen' },
+        { title: 'Flow Movements', duration: '20 min', instructor: 'Grace Wong' },
+        { title: 'Balance & Coordination', duration: '18 min', instructor: 'Li Wei' },
+        { title: 'Energy Flow Practice', duration: '22 min', instructor: 'Yuki Tanaka' }
       ]
     },
-    music: {
-      title: "Music & Movement",
-      icon: <Music size={24} />,
-      description: "Rhythmic exercises and dance moves to uplifting music",
+    dance: {
+      icon: Activity,
+      title: 'Music & Movement',
+      description: 'Fun dance moves and rhythmic exercises to music.',
       videos: [
-        {
-          id: "dQw4w9WgXcQ", // Replace with actual music video ID
-          title: "Golden Oldies Dance Workout",
-          duration: "32 min",
-          instructor: "Dance Master Betty"
-        },
-        {
-          id: "dQw4w9WgXcQ", // Replace with actual music video ID
-          title: "Seated Dance Moves",
-          duration: "24 min",
-          instructor: "Rhythm Coach Dave"
-        },
-        {
-          id: "dQw4w9WgXcQ", // Replace with actual music video ID
-          title: "Hand Clapping & Rhythms",
-          duration: "18 min",
-          instructor: "Music Therapist Amy"
-        }
+        { title: 'Gentle Dance Moves', duration: '20 min', instructor: 'Sophie Turner' },
+        { title: 'Rhythm Exercises', duration: '15 min', instructor: 'Marcus Davis' },
+        { title: 'Fun Movement Games', duration: '18 min', instructor: 'Emma Wilson' },
+        { title: 'Dance Fitness', duration: '25 min', instructor: 'Alex Rivera' }
       ]
     }
   };
-
+  
   const currentActivity = activities[selectedActivity];
-
+  const IconComponent = currentActivity.icon;
+  
   return (
-    <div className="physical-activities-page">
-      <div className="container">
-        <header className="activities-header">
-          <h1 className="activities-title">Physical Activities & Wellness</h1>
-          <p className="activities-subtitle">Choose an activity to get started with guided videos</p>
-        </header>
-
-        <div className="activities-layout">
-          {/* Activity Selection Sidebar */}
-          <aside className="activities-sidebar">
-            <h3 className="sidebar-title">Choose Activity</h3>
-            <nav className="activity-nav">
-              {Object.entries(activities).map(([key, activity]) => (
-                <button
+    <main className="physical-activities-page">
+      <section className="hero-section">
+        <div className="container">
+          <h1>Physical Activities & Wellness</h1>
+          <p className="hero-subtitle">Choose an activity to get started with guided videos</p>
+        </div>
+      </section>
+      
+      <section className="activities-section">
+        <div className="container">
+          <div className="activity-tabs">
+            {Object.entries(activities).map(([key, activity]) => {
+              const IconComponent = activity.icon;
+              return (
+                <button 
                   key={key}
-                  className={`activity-nav-item ${selectedActivity === key ? 'active' : ''}`}
+                  className={`activity-tab ${selectedActivity === key ? 'active' : ''}`}
                   onClick={() => setSelectedActivity(key)}
                 >
-                  <span className="activity-nav-icon">{activity.icon}</span>
-                  <span className="activity-nav-text">{activity.title}</span>
+                  <IconComponent size={20} />
+                  <span>{activity.title}</span>
                 </button>
-              ))}
-            </nav>
-          </aside>
+              );
+            })}
+          </div>
 
-          {/* Video Content Area */}
-          <main className="video-content">
-            <div className="activity-info">
+          <div className="activity-content">
+            <div className="activity-details">
               <div className="activity-header">
-                <div className="activity-icon">{currentActivity.icon}</div>
-                <div className="activity-details">
-                  <h2 className="activity-title">{currentActivity.title}</h2>
-                  <p className="activity-description">{currentActivity.description}</p>
+                <div className="activity-icon">
+                  <IconComponent size={32} />
+                </div>
+                <div>
+                  <h3>{currentActivity.title}</h3>
+                  <p>{currentActivity.description}</p>
                 </div>
               </div>
-            </div>
-
-            <div className="videos-grid">
-              {currentActivity.videos.map((video, index) => (
-                <div key={index} className="video-card">
-                  <div className="video-thumbnail">
-                    <iframe
-                      src={`https://www.youtube.com/embed/${video.id}`}
+              
+              <div className="videos-showcase">
+                {currentActivity.videos.map((video, index) => (
+                  <div key={index} className="video-card">
+                    <iframe 
+                      src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
                       title={video.title}
-                      frameBorder="0"
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      frameBorder="0" 
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
                       allowFullScreen
-                    ></iframe>
-                    <div className="video-overlay">
-                      <Play size={20} className="play-icon" />
+                    />
+                    <div className="video-info">
+                      <h4>{video.title}</h4>
+                      <p className="video-meta">{video.duration} • {video.instructor}</p>
                     </div>
                   </div>
-                  <div className="video-info">
-                    <h3 className="video-title">{video.title}</h3>
-                    <div className="video-meta">
-                      <span className="video-duration">
-                        <Clock size={14} />
-                        {video.duration}
-                      </span>
-                      <span className="video-instructor">
-                        <Users size={14} />
-                        {video.instructor}
-                      </span>
-                    </div>
-                  </div>
-                </div>
-              ))}
+                ))}
+              </div>
             </div>
-          </main>
+          </div>
         </div>
-      </div>
-    </div>
+      </section>
+    </main>
   );
 }
 
