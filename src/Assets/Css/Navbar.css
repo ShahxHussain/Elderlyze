@@ -1,3 +1,10 @@
+/* CSS Variables for navbar - using original green theme */
+:root {
+  --primary-600: #2aa388; /* Original green from App.css */
+  --muted: #6b7280;
+  --border: #e5e7eb;
+}
+
 .navbar {
   position: sticky;
   top: 0;
@@ -6,16 +13,175 @@
   backdrop-filter: blur(8px);
   border-bottom: 1px solid var(--border);
 }
-.nav-content { display: flex; align-items: center; justify-content: space-between; padding: 14px 0; }
-.brand { font-weight: 800; letter-spacing: 0.2px; color: var(--primary-600); font-size: 20px; text-decoration: none; display: inline-flex; align-items: center; }
-.brand-logo { width: 96px; height: 36px; vertical-align: middle; margin-right: 10px; border-radius: 0; box-shadow: none; background: transparent; padding: 0; object-fit: contain; transform: scale(1.6); transform-origin: left center; }
-.nav-links { display: none; gap: 18px; }
-.nav-links a { color: var(--muted); text-decoration: none; font-weight: 500; }
-.nav-links a:hover { color: var(--primary-600); }
-.auth-actions { display: none; gap: 10px; }
+
+.nav-content { 
+  display: flex; 
+  align-items: center; 
+  justify-content: space-between; 
+  padding: 14px 0; 
+  position: relative; 
+}
+
+.brand { 
+  font-weight: 800; 
+  letter-spacing: 0.2px; 
+  color: var(--primary-600); 
+  font-size: 20px; 
+  text-decoration: none; 
+  display: inline-flex; 
+  align-items: center; 
+}
+
+.brand-logo { 
+  width: 96px; 
+  height: 36px; 
+  vertical-align: middle; 
+  margin-right: 10px; 
+  border-radius: 0; 
+  box-shadow: none; 
+  background: transparent; 
+  padding: 0; 
+  object-fit: contain; 
+  transform: scale(1.6); 
+  transform-origin: left center; 
+}
+
+.nav-links { 
+  display: none; 
+  gap: 18px; 
+}
+
+.nav-links a { 
+  color: var(--muted); 
+  text-decoration: none; 
+  font-weight: 500; 
+}
+
+.nav-links a:hover { 
+  color: var(--primary-600); 
+}
+
+.auth-actions { 
+  display: none; 
+  gap: 10px; 
+}
+
+/* Mobile menu toggle */
+.menu-toggle { 
+  display: none; 
+  flex-direction: column; 
+  gap: 4px; 
+  background: none; 
+  border: none; 
+  cursor: pointer; 
+  padding: 8px; 
+  border-radius: 8px; 
+}
+
+.hamburger-line { 
+  width: 24px; 
+  height: 3px; 
+  background: var(--primary-600); 
+  border-radius: 2px; 
+  transition: all 0.3s ease; 
+}
+
+/* Mobile menu styles */
+@media (max-width: 719px) {
+  .menu-toggle { 
+    display: flex; 
+  }
+  
+  .nav-links { 
+    position: absolute; 
+    top: 100%; 
+    left: 0; 
+    right: 0; 
+    background: #ffffff; 
+    border-bottom: 1px solid var(--border);
+    padding: 20px;
+    flex-direction: column; 
+    gap: 0;
+    z-index: 100;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    display: none; /* Hidden by default on mobile */
+    min-height: auto; /* Ensure proper height */
+    width: 100%; /* Ensure full width */
+  }
+  
+  .nav-links.open { 
+    display: flex; /* Show when open class is added */
+  }
+  
+  .auth-actions { 
+    position: absolute; 
+    top: calc(100% + 220px); /* Increased spacing to ensure no overlap */
+    left: 0; 
+    right: 0; 
+    background: #ffffff; 
+    border-bottom: 1px solid var(--border);
+    padding: 20px;
+    flex-direction: column; 
+    gap: 12px; 
+    z-index: 100;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    display: none; /* Hidden by default on mobile */
+    width: 100%; /* Ensure full width */
+  }
+  
+  .auth-actions.open { 
+    display: flex; /* Show when open class is added */
+  }
+  
+  .nav-links a { 
+    padding: 16px 0; 
+    border-bottom: 1px solid rgba(229, 231, 235, 0.5);
+    font-size: 16px;
+    display: block;
+    width: 100%;
+    text-align: left;
+    color: var(--muted); /* Ensure text color is visible */
+  }
+  
+  .nav-links a:hover {
+    color: var(--primary-600); /* Ensure hover color works */
+  }
+  
+  .nav-links a:last-child {
+    border-bottom: none; /* Remove border from last link */
+  }
+  
+  .auth-actions .btn { 
+    width: 100%; 
+    justify-content: center; 
+    padding: 14px 20px;
+  }
+}
 
 @media (min-width: 720px) {
-  .nav-links { display: flex; }
-  .auth-actions { display: flex; }
+  .nav-links { 
+    display: flex; 
+  }
+  .auth-actions { 
+    display: flex; 
+  }
+  .menu-toggle { 
+    display: none; 
+  }
+}
+
+/* Small screen adjustments */
+@media (max-width: 480px) {
+  .nav-content { 
+    padding: 12px 0; 
+  }
+  .brand-logo { 
+    width: 80px; 
+    height: 30px; 
+    transform: scale(1.4); 
+  }
+  .brand { 
+    font-size: 18px; 
+  }
 }
 

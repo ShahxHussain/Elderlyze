@@ -9,6 +9,7 @@ import SOSInteraction from './pages/SOSInteraction';
 import Moods from './pages/Moods';
 import Chatbot from './pages/Chatbot';
 import Medicines from './pages/Medicines';
+import PhysicalActivities from './pages/PhysicalActivities';
 import Footer from './components/Footer';
 import {Routes, Route, useLocation } from 'react-router-dom';
 import { useEffect } from 'react';
@@ -44,6 +45,7 @@ function App() {
           <Route path="/app/mood" element={<Moods />} />
           <Route path="/app/chat" element={<Chatbot />} />
           <Route path="/app/medicines" element={<Medicines />} />
+          <Route path="/app/physical-activities" element={<PhysicalActivities />} />
         </Routes>
         <Footer />
       </div>

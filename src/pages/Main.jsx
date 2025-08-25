@@ -1,6 +1,6 @@
 import React from 'react';
 import '../Assets/Css/Main.css';
-import { Bot, Smile, Pill, Siren } from 'lucide-react';
+import { Bot, Smile, Pill, Siren, Activity } from 'lucide-react';
 
 function Main() {
   return (
@@ -29,6 +29,11 @@ function Main() {
             <div className="tile-icon"><Siren size={26} /></div>
             <div className="tile-title">SOS</div>
             <div className="tile-desc">Contacts and auto alert</div>
+          </a>
+          <a className="main-tile" href="/app/physical-activities">
+            <div className="tile-icon"><Activity size={26} /></div>
+            <div className="tile-title">Physical Activities</div>
+            <div className="tile-desc">Yoga, meditation & wellness</div>
           </a>
         </div>
       </div>
