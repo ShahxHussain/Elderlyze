@@ -249,5 +249,20 @@
   .brand { 
     font-size: 16px; 
   }
+  
+  /* Mobile font size improvements */
+  .nav-links a {
+    font-size: 18px !important;
+    padding: 18px 0;
+  }
+  
+  .auth-actions .btn {
+    font-size: 16px !important;
+    padding: 16px 20px;
+  }
+  
+  .brand {
+    font-size: 18px !important;
+  }
 }
 

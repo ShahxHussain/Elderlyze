@@ -101,7 +101,7 @@ function Chatbot() {
               aria-label="Message"
             />
             <button className="btn btn-primary" type="submit" aria-label="Send message">
-              <Send size={16} style={{marginRight:8}} /> Send
+              <Send size={16} /> <span className="send-text">Send</span>
             </button>
           </form>
         </section>

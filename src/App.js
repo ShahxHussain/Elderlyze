@@ -18,6 +18,9 @@ function App() {
   const location = useLocation();
   const hideChrome = location.pathname.startsWith('/app/chat');
   
+  // Define which pages should show the footer
+  const showFooter = ['/', '/signin', '/signup'].includes(location.pathname);
+  
   useEffect(() => {
     if (location.pathname === '/') {
       if (location.hash) {
@@ -47,7 +50,7 @@ function App() {
           <Route path="/app/medicines" element={<Medicines />} />
           <Route path="/app/physical-activities" element={<PhysicalActivities />} />
         </Routes>
-        <Footer />
+        {showFooter && <Footer />}
       </div>
   );
 }
