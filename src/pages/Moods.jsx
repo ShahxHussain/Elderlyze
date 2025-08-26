@@ -1,4 +1,5 @@
 import React, { useMemo, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import '../Assets/Css/Moods.css';
 
 const ALL_MOODS = [
@@ -49,6 +50,8 @@ const MOOD_SUGGESTIONS = {
 
 function Moods() {
   const [selected, setSelected] = useState('');
+  const navigate = useNavigate();
+
   const selectedName = useMemo(() => {
     const found = ALL_MOODS.find((m) => m.emoji === selected);
     return found ? found.name : '';
@@ -57,6 +60,12 @@ function Moods() {
   const suggestion = selected
     ? MOOD_SUGGESTIONS[selected] || 'Would you like a gentle check-in?'
     : 'Browse and tap any mood to get a tailored suggestion.';
+
+  function handleStartChat() {
+    if (selected) {
+      navigate('/app/chat', { state: { mood: selected } });
+    }
+  }
 
   return (
     <main className="moods">
@@ -87,7 +96,13 @@ function Moods() {
         </div>
 
         <div className="moods-actions">
-          <button className="btn btn-primary btn-lg" disabled={!selected}>Start Chat</button>
+          <button 
+            className="btn btn-primary btn-lg" 
+            disabled={!selected} 
+            onClick={handleStartChat}
+          >
+            Start Chat
+          </button>
           <button className="btn btn-ghost" onClick={() => setSelected('')}>Clear</button>
         </div>
       </div>
@@ -96,5 +111,3 @@ function Moods() {
 }
 
 export default Moods;
-
-

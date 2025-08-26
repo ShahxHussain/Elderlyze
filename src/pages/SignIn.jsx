@@ -1,13 +1,15 @@
 import React, { useState } from 'react';
 import '../Assets/Css/SignIn.css';
 import { Link, useNavigate } from 'react-router-dom';
-import Logo from '../Assets/Images/logo.png';
+import Logo from '../Assets/Images/Logo.png';
 
 function SignIn() {
   const navigate = useNavigate();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
+  const [showPassword, setShowPassword] = useState(false); // 👈 track password visibility
+
   return (
     <main className="auth">
       <div className="container">
@@ -25,12 +27,33 @@ function SignIn() {
             }
           }}>
             <label htmlFor="email">Email Address</label>
-            <input id="email" type="email" placeholder="Enter your email" value={email} onChange={(e)=>setEmail(e.target.value)} required />
+            <input 
+              id="email" 
+              type="email" 
+              placeholder="Enter your email" 
+              value={email} 
+              onChange={(e)=>setEmail(e.target.value)} 
+              required 
+            />
 
             <label htmlFor="password">Password</label>
             <div className="input-with-icon">
-              <input id="password" type="password" placeholder="Enter your password" value={password} onChange={(e)=>setPassword(e.target.value)} required />
-              <span className="eye" aria-hidden="true">👁️</span>
+              <input 
+                id="password" 
+                type={showPassword ? "text" : "password"}  // 👈 toggle type
+                placeholder="Enter your password" 
+                value={password} 
+                onChange={(e)=>setPassword(e.target.value)} 
+                required 
+              />
+              <span 
+                className="eye" 
+                role="button" 
+                tabIndex={0} 
+                onClick={() => setShowPassword(!showPassword)} 
+              >
+                {showPassword ? "🙈" : "👁️"}   {/* 👈 change icon */}
+              </span>
             </div>
 
             {error && <div className="error-text" role="alert">{error}</div>}
@@ -53,5 +76,3 @@ function SignIn() {
 }
 
 export default SignIn;
-
-

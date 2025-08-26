@@ -1,16 +1,31 @@
 import React, { useRef, useState, useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 import '../Assets/Css/Chatbot.css';
 import { Send, Wand2, HeartHandshake, SmilePlus } from 'lucide-react';
-import logo from '../Assets/Images/logo.png'
+import logo from '../Assets/Images/Logo.png';
 
 function Chatbot() {
+  const location = useLocation();
+  const initialMood = location.state?.mood || '';  // get emoji if passed
+
   const [messages, setMessages] = useState([
     { id: 1, role: 'bot', text: 'Hello! I am here with you. How are you feeling today?' },
-    { id: 2, role: 'user', text: 'A bit anxious.' },
-    { id: 3, role: 'bot', text: 'Thanks for sharing. Would a 1‑minute breathing exercise help?' }
   ]);
-  const [input, setInput] = useState('');
+
+  const [input, setInput] = useState(initialMood ? `I feel ${initialMood}` : '');
   const listRef = useRef(null);
+
+  useEffect(() => {
+    if (initialMood) {
+      // Auto-send mood as first user message
+      const next = { id: Date.now(), role: 'user', text: `I feel ${initialMood}` };
+      setMessages((m) => [
+        ...m, 
+        next, 
+        { id: Date.now() + 1, role: 'bot', text: `Thanks for sharing how you feel ${initialMood}. Would you like a small exercise to help?` }
+      ]);
+    }
+  }, [initialMood]);
 
   useEffect(() => {
     if (listRef.current) {
@@ -23,7 +38,11 @@ function Chatbot() {
     const trimmed = input.trim();
     if (!trimmed) return;
     const next = { id: Date.now(), role: 'user', text: trimmed };
-    setMessages((m) => [...m, next, { id: Date.now() + 1, role: 'bot', text: 'I hear you. Let’s take this one small step at a time.' }]);
+    setMessages((m) => [
+      ...m, 
+      next, 
+      { id: Date.now() + 1, role: 'bot', text: 'I hear you. Let’s take this one small step at a time.' }
+    ]);
     setInput('');
   }
 
@@ -92,5 +111,3 @@ function Chatbot() {
 }
 
 export default Chatbot;
-
-
