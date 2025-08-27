@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import '../Assets/Css/SignIn.css';
 import { Link, useNavigate } from 'react-router-dom';
 import Logo from '../Assets/Images/Logo.png';
+import { signInWithEmailAndPassword } from 'firebase/auth';
+import { auth } from '../FIrebase/firebase';
 
 function SignIn() {
   const navigate = useNavigate();
@@ -9,6 +11,7 @@ function SignIn() {
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
   const [showPassword, setShowPassword] = useState(false); // 👈 track password visibility
+  const [loading, setLoading] = useState(false);
 
   return (
     <main className="auth">
@@ -18,12 +21,22 @@ function SignIn() {
           <h1>Welcome Back</h1>
           <p className="auth-sub">Sign in to continue your journey with Elderlyze</p>
 
-          <form className="auth-form" onSubmit={(e) => {
+          <form className="auth-form" onSubmit={async (e) => {
             e.preventDefault();
-            if (email.trim().toLowerCase() === 'abc@gmail.com' && password === 'QWE#123') {
+            setError('');
+            try {
+              setLoading(true);
+              if (!email.trim() || !password) {
+                setError('Enter email and password');
+                setLoading(false);
+                return;
+              }
+              await signInWithEmailAndPassword(auth, email.trim(), password);
               navigate('/app');
-            } else {
-              setError('Incorrect email or password (Hint: abc@gmail.com / QWE#123)');
+            } catch (err) {
+              setError(err.message || 'Failed to sign in');
+            } finally {
+              setLoading(false);
             }
           }}>
             <label htmlFor="email">Email Address</label>
@@ -65,7 +78,7 @@ function SignIn() {
               <Link className="link" to="#">Forgot password?</Link>
             </div>
 
-            <button className="btn btn-primary btn-lg" type="submit">Sign In</button>
+            <button className="btn btn-primary btn-lg" type="submit" disabled={loading}>{loading ? 'Signing in...' : 'Sign In'}</button>
           </form>
 
           <p className="auth-alt">Don't have an account? <Link to="/signup">Sign up here</Link></p>
