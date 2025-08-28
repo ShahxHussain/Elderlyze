@@ -12,9 +12,10 @@ import Medicines from './pages/Medicines';
 import PhysicalActivities from './pages/PhysicalActivities';
 import Footer from './components/Footer';
 import {Routes, Route, useLocation, Navigate } from 'react-router-dom';
-import { useEffect, useEffect as ReactUseEffect, useState } from 'react';
-import { auth } from './FIrebase/firebase';
-import { onAuthStateChanged } from 'firebase/auth';
+import { useEffect, useState } from 'react';
+import { onAuthStateChanged } from "firebase/auth";
+import { auth } from "./Firebase/firebase";
+
 
 function App() {
   const location = useLocation();

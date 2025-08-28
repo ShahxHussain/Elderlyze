@@ -2,7 +2,7 @@ import React, { useEffect, useState, useRef } from 'react';
 import '../Assets/Css/Navbar.css';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
 import Logo from '../Assets/Images/Logo.png';
-import { auth } from '../FIrebase/firebase';
+import { auth } from '../Firebase/firebase';
 import { onAuthStateChanged, signOut } from 'firebase/auth';
 
 function Navbar() {

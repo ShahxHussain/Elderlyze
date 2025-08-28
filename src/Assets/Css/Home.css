@@ -96,7 +96,6 @@
 .bubble-2 { left: 42%; top: 32%; }
 .bubble-3 { right: 8%; top: 0%; }
 
-<<<<<<< HEAD
 .features { padding: 56px 0; }
 .features h2 { font-size: 28px; margin: 0 0 22px; }
 .features-grid { display: grid; grid-template-columns: 1fr; gap: 16px; }
@@ -135,12 +134,6 @@
   .hero-text h1 { font-size: 56px; }
   .features-grid { grid-template-columns: repeat(3, 1fr); }
   .steps { grid-template-columns: repeat(4, 1fr); }
-=======
-@keyframes floaty { 
-  0% { transform: translateY(0); } 
-  50% { transform: translateY(-10px); } 
-  100% { transform: translateY(0); } 
->>>>>>> 13418a8543ed05861de9def57a0898d0c0bd180d
 }
 
 .bubble-1, .bubble-2, .bubble-3 { 

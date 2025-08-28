@@ -3,7 +3,7 @@ import '../Assets/Css/SignIn.css';
 import { Link, useNavigate } from 'react-router-dom';
 import Logo from '../Assets/Images/Logo.png';
 import { signInWithEmailAndPassword } from 'firebase/auth';
-import { auth } from '../FIrebase/firebase';
+import { auth } from '../Firebase/firebase';
 
 function SignIn() {
   const navigate = useNavigate();

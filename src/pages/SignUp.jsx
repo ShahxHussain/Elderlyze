@@ -2,9 +2,10 @@ import React, { useState } from 'react';
 import '../Assets/Css/SignUp.css';
 import { Link, useNavigate } from 'react-router-dom';
 import Logo from '../Assets/Images/Logo.png'
-import { auth, db } from '../FIrebase/firebase';
-import { createUserWithEmailAndPassword, updateProfile, signOut } from 'firebase/auth';
-import { doc, setDoc, serverTimestamp } from 'firebase/firestore';
+import { createUserWithEmailAndPassword, updateProfile, signOut } from "firebase/auth";
+import { doc, setDoc, serverTimestamp } from "firebase/firestore";
+import { auth, db } from "../Firebase/firebase";
+
 
 function SignUp() {
   const navigate = useNavigate();
