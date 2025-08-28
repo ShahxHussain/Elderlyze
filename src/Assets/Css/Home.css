@@ -31,7 +31,7 @@
 .steps li { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 12px; display: flex; align-items: center; gap: 10px; box-shadow: var(--shadow); }
 .step-badge { background: var(--primary); color: #fff; width: 24px; height: 24px; border-radius: 50%; display: inline-grid; place-items: center; font-weight: 800; }
 
-.trusted { padding: 18px 0; margin-top: -12px; }
+.trusted { padding: 48px 0; margin-top: -12px; }
 .trusted-row { display: flex; align-items: center; gap: 12px; justify-content: space-between; background: rgba(255,255,255,0.7); border: 1px solid var(--border); border-radius: 12px; padding: 12px 16px; box-shadow: var(--shadow); }
 .trusted-text { color: #475569; font-weight: 700; }
 .trusted-logos { display: flex; gap: 8px; }
