@@ -101,43 +101,71 @@
   margin: 0;
 }
 
-@media (min-width: 720px) {
-  .main-grid { 
-    grid-template-columns: repeat(3, 1fr); 
-    gap: 24px;
+/* Mobile font size improvements */
+@media (max-width: 768px) {
+  .main {
+    padding: 40px 0;
+  }
+  
+  .main-title {
+    font-size: 28px;
+    margin: 0 0 16px;
+  }
+  
+  .main-sub {
+    font-size: 18px;
+    margin: 0 0 32px;
   }
   
   .main-tile {
-    padding: 28px;
-  }
-  
-  .tile-icon {
-    width: 64px;
-    height: 64px;
+    padding: 20px;
+    gap: 10px;
   }
   
   .tile-title {
-    font-size: 22px;
+    font-size: 18px;
   }
   
   .tile-desc {
     font-size: 15px;
   }
+  
+  .tile-icon {
+    width: 48px;
+    height: 48px;
+    font-size: 20px;
+  }
 }
 
-@media (min-width: 480px) and (max-width: 719px) {
-  .main-grid { 
-    grid-template-columns: repeat(2, 1fr); 
-    gap: 18px;
+@media (max-width: 480px) {
+  .main {
+    padding: 32px 0;
+  }
+  
+  .main-title {
+    font-size: 24px;
+  }
+  
+  .main-sub {
+    font-size: 16px;
   }
   
   .main-tile {
-    padding: 20px;
+    padding: 18px;
+  }
+  
+  .tile-title {
+    font-size: 16px;
+  }
+  
+  .tile-desc {
+    font-size: 14px;
   }
   
   .tile-icon {
-    width: 52px;
-    height: 52px;
+    width: 44px;
+    height: 44px;
+    font-size: 18px;
   }
 }
 
